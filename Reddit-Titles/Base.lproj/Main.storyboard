@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o0M-xr-o20">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reddit Titles View Controller-->
+        <scene sceneID="bLi-4N-Juy">
+            <objects>
+                <viewController id="7AG-Mu-Ffu" customClass="RedditTitlesViewController" customModule="Reddit_Titles" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qgc-8q-UVU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lsw-Ld-owF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lsw-Ld-owF" firstAttribute="top" secondItem="URb-YM-Ohy" secondAttribute="top" id="KI2-qQ-jtv"/>
+                            <constraint firstItem="URb-YM-Ohy" firstAttribute="trailing" secondItem="lsw-Ld-owF" secondAttribute="trailing" id="Ksj-19-py7"/>
+                            <constraint firstItem="lsw-Ld-owF" firstAttribute="leading" secondItem="URb-YM-Ohy" secondAttribute="leading" id="Lmh-BX-mYY"/>
+                            <constraint firstItem="URb-YM-Ohy" firstAttribute="bottom" secondItem="lsw-Ld-owF" secondAttribute="bottom" id="Qv2-sp-9gx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="URb-YM-Ohy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L1C-4C-RvD"/>
+                    <connections>
+                        <outlet property="redditTitlesTableView" destination="lsw-Ld-owF" id="GNe-ka-Vlj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZz-Jg-MBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="-355"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jhh-Ai-2m9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o0M-xr-o20" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8i7-M1-2Cf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7AG-Mu-Ffu" kind="relationship" relationship="rootViewController" id="HLX-cA-0zv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mue-Fl-2YP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1043.2" y="-354.42278860569718"/>
+        </scene>
+    </scenes>
+</document>
